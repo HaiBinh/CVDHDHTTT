@@ -1,3 +1,3 @@
 module.exports = {
-    ADMIN_LIST: ['duongsai'] //admin username = duongsai
+    ADMIN_LIST: ['duongsai', 'superadmin'] //admin username = duongsai
 }
