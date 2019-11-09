@@ -18,5 +18,13 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  'challenge/create-challenge': ['is-admin'],
+  'challenge/put-challenge': ['is-admin'],
+  'challenge/delete-challenge': ['is-admin'],
+  'quizz/create-quizz': ['is-admin'],
+  'quizz/put-quizz': ['is-admin'],
+  'quizz/delete-quizz': ['is-admin'],
 
+  'main/*': ['is-logged-in'],
+  'dashboard/*': ['is-logged-in', 'is-admin'],
 };
