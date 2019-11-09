@@ -1,4 +1,4 @@
-# app
+# quizz-api
 
 a [Sails v1](https://sailsjs.com) application
 
@@ -14,9 +14,9 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Version info
 
-This app was originally generated on Sat Nov 09 2019 13:35:00 GMT+0700 (Indochina Time) using Sails v1.2.3.
+This app was originally generated on Thu May 09 2019 00:39:26 GMT+0700 (SE Asia Standard Time) using Sails v1.2.1.
 
-<!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
+<!-- Internally, Sails used [`sails-generate@1.16.8`](https://github.com/balderdashy/sails-generate/tree/v1.16.8/lib/core-generators/new). -->
 
 
 
