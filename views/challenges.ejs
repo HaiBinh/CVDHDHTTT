@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vào thi</title>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        *{
+            font-size: 16px!important;
+        }
+        .rowChallengesList{
+            margin-top: 20px;
+        }
+        body {
+            min-height: 450px;
+            height: 100vh;
+            margin: 0;
+            background: -webkit-radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
+            background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <% include image.ejs %>
+    <% include navbar.ejs %>
+    <div class="container">
+        <div class="title_challenges text-center">
+            <h3><strong>Mời các bạn lựa chọn gói câu hỏi</strong></h3>
+        </div>
+        <table id="listChallenge" class="table" style="background-color: rgb(250,104,85); font-size: 14px">
+            <thead>
+                <tr style="background-color: rgb(205,75,75)">
+                    <th scope="col" style="color: white">STT</th>
+                    <th scope="col" style="color: white">Id</th>
+                    <th scope="col" style="color: white">Tên gói câu hỏi</th>
+                    <th scope="col" style="color: white">Mô tả</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var id=0; id < challengeList.length; id ++) {
+            %>
+                <tr>
+                    <th scope="row" style="color: white"><%= id + 1 %></th>
+                    <th style="color: white"><%= challengeList[id].id %></th>
+                    <th>
+                        <a href="/main/startContest/<%= challengeList[id].id %>" style="color: white;">
+                            <u><%= challengeList[id].name %></u>
+                        </a>
+                    </th>
+                    <th style="color: white"><%= challengeList[id].description %></th>
+                </tr>
+                <%
+          } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
