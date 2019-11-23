@@ -55,7 +55,7 @@ sails.lift(rc('sails'));
 
 var mongoose = require('mongoose');
 var env = process.env.NODE_ENV || 'devolopment';
-var config = require('./config/mongo')[env];
+var config = require('./mongo')[env];
 
 module.exports = () => {
   var envUrl = process.env[config.use_env_variable];
