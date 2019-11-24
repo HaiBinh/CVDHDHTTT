@@ -40,11 +40,15 @@
 </head>
 
 <body>
-    <div class="group_button" style="position: absolute; right: 0;">
+    <div class="group_button" style="position: absolute; right: 0">
+        <% if (req.session.isadmin) { %>
+            <button class="btn" style="background-color: deepskyblue; position: relative;">Quan ly</button>
+        <% }%>
         <button
-        class="btn btn-danger" style="float : right"
+        class="btn btn-danger" style="position:relative;"
         onClick="logOut()"
         >Đăng xuất</button>
+
     </div>
     <div class="hero-image">
         <div class="hero-text">
