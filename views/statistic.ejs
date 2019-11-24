@@ -18,8 +18,8 @@
             min-height: 450px;
             height: 100vh;
             margin: 0;
-            background: -webkit-radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
-            background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
+            /*background: -webkit-radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);*/
+            /*background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);*/
             color: #fff;
             font-family: 'Open Sans', sans-serif;
         }
@@ -29,18 +29,18 @@
 
 
 
-<body>
+<body style="display: flex; flex-direction: column; justify-content: space-between">
     <% include image.ejs %>
     <% include navbar.ejs %>
     <div class="container">
         <div class="title_challenges text-center">
             <h3><strong>Kết quả các bài thi đã tham gia</strong></h3>
         </div>
-        <table id="listChallenge" class="table" style="background-color: rgb(250,104,85); font-size: 14px">
+        <table id="listChallenge" class="table" style="font-size: 14px; color: black">
             <thead>
-                <tr style="background-color: rgb(205,75,75)">
+                <tr style="background-color: #001c20">
                     <th scope="col" style="color: white">STT</th>
-                    <th scope="col" style="color: white">Id</th>
+<!--                    <th scope="col" style="color: white">Id</th>-->
                     <th scope="col" style="color: white">Tên gói câu hỏi</th>
                     <th scope="col" style="color: white">Điểm cao nhất</th>
                     <th scope="col" style="color: white">Thời gian tốt nhất</th>
@@ -50,17 +50,18 @@
                 <% for(var id=0; id < resultList.length; id ++) {
             %>
                 <tr>
-                    <th scope="row" style="color: white"><%= id + 1 %></th>
-                    <th style="color: white"><%= resultList[id].id %></th>
-                    <th style="color: white"><%= resultList[id].challengeName %></th>
-                    <th style="color: white"><%= resultList[id].bestScore %></th>
-                    <th style="color: white"><%= resultList[id].bestTime / 1000 %> giây</th>
+                    <th scope="row"><%= id + 1 %></th>
+<!--                    <th style="color: white"><%= resultList[id].id %></th>-->
+                    <th><%= resultList[id].challengeName %></th>
+                    <th><%= resultList[id].bestScore %></th>
+                    <th><%= resultList[id].bestTime / 1000 %> giây</th>
                 </tr>
                 <%
           } %>
             </tbody>
         </table>
     </div>
+    <% include footer.ejs%>
 </body>
 
 </html>

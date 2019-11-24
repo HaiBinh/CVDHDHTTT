@@ -14,7 +14,7 @@
         /* The hero image */
         .hero-image {
             /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alphabet.jpg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent.fhan5-6.fna.fbcdn.net/v/t1.15752-9/s2048x2048/76713921_442709706661644_5118929322601611264_n.jpg?_nc_cat=105&_nc_ohc=l1vUdNTQla8AQlYbsN8HyD3g9ZFP-iSCMW3DeAoR7kvvzet-gHhnIxDiw&_nc_ht=scontent.fhan5-6.fna&oh=ba6d444ac521934cf55f4e7b966bad0e&oe=5E890AC9");
 
             /* Set a specific height */
             height: 40%;
@@ -40,20 +40,22 @@
 </head>
 
 <body>
-        <div class="group_button">
-                <button 
-                class="btn btn-danger" style="float : right"
-                onClick="logOut()"
-                >Đăng xuất</button>
-            </div>
+    <div class="group_button" style="position: absolute; right: 0;">
+        <button
+        class="btn btn-danger" style="float : right"
+        onClick="logOut()"
+        >Đăng xuất</button>
+    </div>
     <div class="hero-image">
         <div class="hero-text">
-            <h1>QuizzApp</h1>
-            <p>Ứng dụng thi thử Tiếng Anh tuyệt nhất</p>
+            <h1 style="font-size: 50px">QuizzApp</h1>
+            <br>
+            <br>
+            <p style="font-size: 30px">Ứng dụng thi trắc nghiệm tuyệt nhất</p>
         </div>
     </div>
 
-    
+
 </body>
 <script>
     function logOut() {
