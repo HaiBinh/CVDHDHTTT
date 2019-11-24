@@ -42,7 +42,7 @@
 <body>
     <div class="group_button" style="position: absolute; right: 0">
         <% if (req.session.isadmin) { %>
-            <button class="btn" style="background-color: deepskyblue; position: relative;">Quan ly</button>
+            <button class="btn" style="background-color: deepskyblue; position: relative;" onclick="dashboard()">Quan ly</button>
         <% }%>
         <button
         class="btn btn-danger" style="position:relative;"
@@ -64,6 +64,9 @@
 <script>
     function logOut() {
         window.location.replace('/main/logout')
+    }
+    function dashboard() {
+        window.location.replace('/dashboard')
     }
 </script>
 </html>
